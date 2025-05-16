@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Radar</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="C:\Users\royko\OneDrive\Desktop\6th semester\newstyle.css" />
+  <style>
+    #map {
+      height: 100vh; /* Full screen height */
+      width: 100%; /* Full screen width */
+    }
+  </style>
+</head>
+<body>
+  <div class="icon">
+    <a href="index.html">Weather App</a>
+  </div>
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    // Initialize the map
+    const map = L.map('map').setView([20.5937, 78.9629], 5); // Centered on India
+
+    // Add a tile layer (OpenStreetMap)
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; Weather App contributors'
+    }).addTo(map);
+
+    // Add OpenWeatherMap tile layer for weather radar
+    const apiKey = '76239df9ddb8abb1b017e2a2d2ad4b7d'; // Replace with your OpenWeatherMap API key
+    const weatherLayer = L.tileLayer(`https://tile.openweathermap.org/map/precipitation_new/{z}/{x}/{y}.png?appid=${apiKey}`, {
+      attribution: '&copy; Weather App'
+    });
+
+    // Add weather layer to the map
+    weatherLayer.addTo(map);
+  </script>
+</body>
+</html>
