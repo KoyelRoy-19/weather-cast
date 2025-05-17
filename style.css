@@ -144,7 +144,9 @@ section
     
     overflow: hidden;
     color: #020537;
-  }
+  padding: 19px 10px;
+    font-size: 20px;
+}
 
   .navbar a {
     float: left;
@@ -168,4 +170,17 @@ section
   .logo
   {
     padding: 16px 10px;
+    display: flex;
+  }
+  .logo img
+  {
+    border-radius: 100px 100px;
+    height: 70px;
+    width: 70px;
+  }
+  .logo1
+  {
+    height: 40px;
+    width: 40px;
+    padding: 19px 10px;
   }
