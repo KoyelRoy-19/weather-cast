@@ -184,3 +184,18 @@ section
     width: 40px;
     padding: 19px 10px;
   }
+@media (max-width: 600px) {
+  .navbar a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .details {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .logo h1 {
+    font-size: 20px;
+  }
+}
