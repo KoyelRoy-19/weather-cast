@@ -51,7 +51,7 @@ else if(data.weather[0].main == "Clear"){
 else if(data.weather[0].main == "Rain"){
     document.querySelector(".weather1").innerHTML= "Rainy";
 }
-else if(data.weather[0].main == "Drizzle"){ a
+else if(data.weather[0].main == "Drizzle"){ 
     document.querySelector(".weather1").innerHTML= "Drizzly";
 }
 else if(data.weather[0].main == "Mist"){
